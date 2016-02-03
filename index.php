@@ -1,80 +1,64 @@
 <?php
-/**
- * On-the-fly CSS Compression
- * Copyright (c) 2009 and onwards, Manas Tungare.
- * Creative Commons Attribution, Share-Alike.
- *
- * In order to minimize the number and size of HTTP requests for CSS content,
- * this script combines multiple CSS files into a single file and compresses
- * it on-the-fly.
- *
- * To use this in your HTML, link to it in the usual way:
- * <link rel="stylesheet" type="text/css" media="screen, print, projection" href="/css/compressed.css.php" />
- */
 
-/* Add your CSS files to this array (THESE ARE ONLY EXAMPLES) */
-$cssFiles = array(
-    'css/styles/action-bar.css',
-    'css/styles/contact.css',
-    'css/styles/footer.css',
-    'css/styles/form-elements.css',
-    'css/styles/fullwidth-features.css',
-    'css/styles/global-helper-sectio.css',
-    'css/styles/headers-slider-dividers.css',
-    'css/styles/hero-carousel.css',
-    'css/styles/infobox.css',
-    'css/styles/integrity-light.css',
-    'css/styles/main-navigation.css',
-    'css/styles/main-sitio.css',
-    'css/styles/media-box.css',
-    'css/styles/media-print.css',
-    'css/styles/results-items.css',
-    'css/styles/section-colors.css',
-    'css/styles/single-listing-action.css',
-    'css/styles/typography.css',
-    'css/styles/video-strip.css'
-);
+    $cssFiles = array();
 
-/**
- * Ideally, you wouldn't need to change any code beyond this point.
- */
-$buffer = "";
-foreach ($cssFiles as $cssFile) {
-  $buffer .= file_get_contents($cssFile);
-}
+    $count = 0;
+    $path = 'css/styles';
 
-// Remove comments
-$buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
+    $dir = dir($path);
 
-// Remove space after colons
-$buffer = str_replace(': ', ':', $buffer);
+    while (( $file = $dir->read() ) != false ) {
+        if ( ++$count > 2 ) {
+            $file_new = str_replace('.css', '', $file);
+            //echo $file_new . "<br>";
+            if ( $file_new != $file ) {
+                $cssFiles[] = str_replace('.css', '', $file);
+                //echo $cssFiles[$file];
+            }
+        }
+        //All the files in the path are included
+        if (is_file($path . '/' . $file) and preg_match('/^(.+)\.css$/i', $file)) {
+            //echo $path . '/' . $file;
+            include $path . '/' . $file;
+        }
+    }
+    $dir->close();
 
-// Remove whitespace
-$buffer = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $buffer);
+    $buffer = "";
+    foreach ($cssFiles as $cssFile) {
+        $content = $path . '/' . $cssFile . '.css';
+        echo $content;
+        $buffer .= file_get_contents($content);
+    }
+    // Remove comments
+    $buffer = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $buffer);
 
-// Enable GZip encoding.
-ob_start("ob_gzhandler");
+    // Remove space after colons
+    $buffer = str_replace(': ', ':', $buffer);
 
-// Enable caching
-header('Cache-Control: public');
+    // Remove whitespace
+    $buffer = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $buffer);
 
-// Expire in one day
-header('Expires: ' . gmdate('D, d M Y H:i:s', time() + 86400) . ' GMT');
+    // Enable GZip encoding.
+    ob_start("ob_gzhandler");
 
-// Set the correct MIME type, because Apache won't set it for us
-header("Content-type: text/css");
+    // Enable caching
+    //header('Cache-Control: public');
 
-// Write everything out
-/*
-$concat = 'import';
-$urlStyles = 'css/styles/min/';
-$file = $urlStyles . $concat . '.min.css';
-if ( file_exists($file) ) {
-    unlink($file);
-}
-*/
-echo($buffer);
-//$buffer = fopen($file, 'a');
-//fwrite($cssFile, $buffer);
-//fclose($cssFile);
+    // Expire in one day
+    //header('Expires: ' . gmdate('D, d M Y H:i:s', time() + 86400) . ' GMT');
+
+    // Set the correct MIME type, because Apache won't set it for us
+    //header("Content-type: text/css");
+
+    //FILE WRITING
+    $concat = 'import';
+    $urlStyles = 'css/min';
+    $file = $urlStyles . $concat . '.min.css';
+    if (file_exists($file)) {
+        unlink($file);
+    }
+    $cssFiles = fopen($file, 'a');
+    fwrite($cssFiles, $buffer);
+    fclose($cssFiles);
 ?>
