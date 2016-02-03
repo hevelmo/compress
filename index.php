@@ -19,7 +19,7 @@
         //All the files in the path are included
         if (is_file($path . '/' . $file) and preg_match('/^(.+)\.css$/i', $file)) {
             //echo $path . '/' . $file;
-            include $path . '/' . $file;
+            //include $path . '/' . $file;
         }
     }
     $dir->close();
@@ -27,7 +27,7 @@
     $buffer = "";
     foreach ($cssFiles as $cssFile) {
         $content = $path . '/' . $cssFile . '.css';
-        echo $content;
+        //echo $content;
         $buffer .= file_get_contents($content);
     }
     // Remove comments
@@ -53,7 +53,7 @@
 
     //FILE WRITING
     $concat = 'import';
-    $urlStyles = 'css/min';
+    $urlStyles = 'css/min/';
     $file = $urlStyles . $concat . '.min.css';
     if (file_exists($file)) {
         unlink($file);
