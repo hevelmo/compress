@@ -1,0 +1,88 @@
+/* ################################################################################################### *\
+
+    Project Name: Camcar Sitio
+    Proyect Version: 2.1
+    Author: HEVELMO
+    Update: hevelmo
+
+    CONTENT STYLES SITIO
+
+\* ################################################################################################### */
+/* ------------------------------------------------------ *\
+    [styles] BOOTSTRAP
+\* ------------------------------------------------------ */
+    /* DEVELOPMENT*/
+        @import url('bootstrap/development/bootstrap-extend.css');
+        @import url('bootstrap/development/bootstrap-theme.css');
+        @import url('bootstrap/development/bootstrap.css');
+/* ------------------------------------------------------ *\
+    [styles] SITIO
+\* ------------------------------------------------------ */
+    /* DEVELOPMENT */
+        @import url('sitio/development/action-bar.css');
+        @import url('sitio/development/animate.css');
+        @import url('sitio/development/animation.css');
+        @import url('sitio/development/backtotop.css');
+        @import url('sitio/development/cd-animation.css');
+        @import url('sitio/development/contact.css');
+        @import url('sitio/development/corp-medigraf.css');
+        @import url('sitio/development/footer.css');
+        @import url('sitio/development/form-elements.css');
+        @import url('sitio/development/form-validation.css');
+        @import url('sitio/development/fullwidth-features.css');
+        @import url('sitio/development/global-helper-sectio.css');
+        @import url('sitio/development/headers-slider-dividers.css');
+        @import url('sitio/development/hero-carousel.css');
+        @import url('sitio/development/infobox.css');
+        @import url('sitio/development/integrity-light.css');
+        @import url('sitio/development/main-navigation.css');
+        @import url('sitio/development/main-responsive.css');
+        @import url('sitio/development/main-sitio.css');
+        @import url('sitio/development/media-box.css');
+        @import url('sitio/development/media-print.css');
+        @import url('sitio/development/mobiletoggle.css');
+        @import url('sitio/development/results-items.css');
+        @import url('sitio/development/section-colors.css');
+        @import url('sitio/development/single-listing-action.css');
+        @import url('sitio/development/typography.css');
+        @import url('sitio/development/video-strip.css');
+/* ------------------------------------------------------ *\
+    [styles] SITIO PLUGINS
+\* ------------------------------------------------------ */
+    /* DEVELOPMENT */
+        @import url('sitio/plugins/development/flexslider.css');
+        @import url('sitio/plugins/development/flexslidernew.css');
+        @import url('sitio/plugins/development/hero-carousel-animation.css');
+        @import url('sitio/plugins/development/herocarousel.css');
+        @import url('sitio/plugins/development/inner.css');
+        @import url('sitio/plugins/development/owl.carousel.css');
+        @import url('sitio/plugins/development/owl.theme.css');
+        @import url('sitio/plugins/development/owl.transitions.css');
+        @import url('sitio/plugins/development/scrol-down.css');
+/* ------------------------------------------------------ *\
+    [styles] STYLES
+\* ------------------------------------------------------ */
+    /* DEVELOPMENT*/
+        @import url('styles/development/basscss.css');
+        @import url('styles/development/hint.css');
+/* ------------------------------------------------------ *\
+    [styles] webfont
+\* ------------------------------------------------------ */
+    /* DEVELOPMENT*/
+        @import url('webfonts/development/7-stroke.css');
+        @import url('webfonts/development/avenir.css');
+        @import url('webfonts/development/brand-icons.css');
+        @import url('webfonts/development/elegant-icons.css');
+        @import url('webfonts/development/flexslider.css');
+        @import url('webfonts/development/font-awesome.css');
+        @import url('webfonts/development/fullwidth-features.css');
+        @import url('webfonts/development/glyphicons.css');
+        @import url('webfonts/development/ionicons.css');
+        @import url('webfonts/development/material-design.css');
+        @import url('webfonts/development/mfglabs.css');
+        @import url('webfonts/development/navicons.css');
+        @import url('webfonts/development/open-iconic.css');
+        @import url('webfonts/development/pe-icon-7-stroke.css');
+        @import url('webfonts/development/themify.css');
+        @import url('webfonts/development/weather-icons.css');
+        @import url('webfonts/development/web-icons.css');
