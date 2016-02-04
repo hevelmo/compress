@@ -24,8 +24,9 @@
         */ ?>
         <link rel="stylesheet" href="../css/import-sitio.min.css">
 
-        <?php /*<!--<link rel="apple-touch-icon" href="../img/ico/apple-touch-icon.png">
-        <link rel="shortcut icon" href="../img/ico/camcaricon.ico">-->*/ ?>
+        <?php /*
+        <!--<link rel="apple-touch-icon" href="../img/ico/apple-touch-icon.png">
+        <link rel="shortcut icon" href="../img/ico/camcaricon.ico">-->
 
         <!--[if lt IE 9]>
             <script src="../../lib/assets/plugins/html5shiv/html5shiv.min.js"></script>
@@ -44,7 +45,7 @@
             ga('create', 'UA-60582942-1', 'auto');
             ga('send', 'pageview');
         </script>
-
+        */ ?>
         <script>
             var nav = navigator.appName;
 
@@ -78,6 +79,7 @@
                 }
             }
         </script>
+
 
         <script src="../lib/modernizr.js"></script>
     </head>
@@ -320,14 +322,14 @@
         --> */ ?>
         <!-- PLUGINS -->
         <!-- CORE JS -->
-        <script src='js/min/core.min.js'></script>
         <?php /*
+        <script src='js/min/core.min.js'></script>
+        */ ?>
         <script src='js/objects.js'></script>
         <script src='js/method.js'></script>
         <script src='js/model.js'></script>
         <script src='js/room.js'></script>
         <script src='js/main.js'></script>
-        */ ?>
     </body>
 </html>
 

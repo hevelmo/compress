@@ -1,24 +1,27 @@
 /* ################################################################################################### *\
 
-    Project Name: Camcar Sitio
+    Project Name: Camcar Sitio Import CSS
     Proyect Version: 2.1
     Author: HEVELMO
     Update: hevelmo
 
     CONTENT STYLES SITIO
+        [styles] BOOTSTRAP
+        [styles] SITIO
+        [styles] SITIO PLUGINS
+        [styles] STYLES
+        [styles] webfont
 
 \* ################################################################################################### */
 /* ------------------------------------------------------ *\
     [styles] BOOTSTRAP
 \* ------------------------------------------------------ */
-    /* DEVELOPMENT*/
         @import url('bootstrap/development/bootstrap-extend.css');
         @import url('bootstrap/development/bootstrap-theme.css');
         @import url('bootstrap/development/bootstrap.css');
 /* ------------------------------------------------------ *\
     [styles] SITIO
 \* ------------------------------------------------------ */
-    /* DEVELOPMENT */
         @import url('sitio/development/action-bar.css');
         @import url('sitio/development/animate.css');
         @import url('sitio/development/animation.css');
@@ -49,7 +52,6 @@
 /* ------------------------------------------------------ *\
     [styles] SITIO PLUGINS
 \* ------------------------------------------------------ */
-    /* DEVELOPMENT */
         @import url('sitio/plugins/development/flexslider.css');
         @import url('sitio/plugins/development/flexslidernew.css');
         @import url('sitio/plugins/development/hero-carousel-animation.css');
@@ -62,13 +64,11 @@
 /* ------------------------------------------------------ *\
     [styles] STYLES
 \* ------------------------------------------------------ */
-    /* DEVELOPMENT*/
         @import url('styles/development/basscss.css');
         @import url('styles/development/hint.css');
 /* ------------------------------------------------------ *\
     [styles] webfont
 \* ------------------------------------------------------ */
-    /* DEVELOPMENT*/
         @import url('webfonts/development/7-stroke.css');
         @import url('webfonts/development/avenir.css');
         @import url('webfonts/development/brand-icons.css');
