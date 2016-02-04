@@ -6,19 +6,19 @@
     Update: hevelmo
 
     CONTENT STYLES SITIO
-        [styles] BOOTSTRAP
         [styles] SITIO
         [styles] SITIO PLUGINS
         [styles] STYLES
-        [styles] webfont
+        [styles] WEBGONTS
+        [styles] BOOTSTRAP
 
 \* ################################################################################################### */
 /* ------------------------------------------------------ *\
     [styles] BOOTSTRAP
 \* ------------------------------------------------------ */
-        @import url('bootstrap/development/bootstrap-extend.css');
-        @import url('bootstrap/development/bootstrap-theme.css');
         @import url('bootstrap/development/bootstrap.css');
+        @import url('bootstrap/development/bootstrap-theme.css');
+        @import url('bootstrap/development/bootstrap-extend.css');
 /* ------------------------------------------------------ *\
     [styles] SITIO
 \* ------------------------------------------------------ */
@@ -36,7 +36,7 @@
         @import url('sitio/development/global-helper-sectio.css');
         @import url('sitio/development/headers-slider-dividers.css');
         @import url('sitio/development/hero-carousel.css');
-        @import url('sitio/development/infobox.css');
+        /*@import url('sitio/development/infobox.css');*/
         @import url('sitio/development/integrity-light.css');
         @import url('sitio/development/main-navigation.css');
         @import url('sitio/development/main-responsive.css');

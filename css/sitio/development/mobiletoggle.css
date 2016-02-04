@@ -67,5 +67,5 @@
   background: #000;
 }
 .navigation-bar-header.sticky { position: fixed; top:0; left: 0; right: 0; display: block; width: 100%; z-index: 90; }
-.sticky-wrapper { margin-top: 0px; height: 70px; z-index: 90; }
+.sticky-wrapper { margin-top: -2px; height: 70px; z-index: 90; }
 .sticky-wrapper-utility-bar, .sticky-wrapper-action-bar { margin-top: 0px; height: auto; z-index: 90; }
