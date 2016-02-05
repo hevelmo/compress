@@ -9,7 +9,6 @@
             $pathFile = $internalBase . $internalValue . '/output/import-'. $internalValue . '.min.css';
             writting($pathFile, $styleBuffer);
         };
-
         foreach ($array as $key => $value) {
             if ( !is_array($value) ) {
                 $principal($base, $value);
