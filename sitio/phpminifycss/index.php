@@ -5,11 +5,9 @@
         $principal = function($internalBase, $internalValue){
             $pathBuffer = $internalBase . $internalValue . '/development/';
             $styleBuffer = minify($pathBuffer);
-            //echo $pathBuffer.'<br>';
 
             $pathFile = $internalBase . $internalValue . '/output/import-'. $internalValue . '.min.css';
             writting($pathFile, $styleBuffer);
-            //echo $pathFile.'<br><br>';
         };
 
         foreach ($array as $key => $value) {
