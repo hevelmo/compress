@@ -5,6 +5,7 @@
         $principal = function($internalBase, $internalValue){
             $pathBuffer = $internalBase . $internalValue . '/development/';
             $styleBuffer = minify($pathBuffer);
+            echo $pathBuffer;
 
             $pathFile = $internalBase . $internalValue . '/output/import-'. $internalValue . '.min.css';
             writting($pathFile, $styleBuffer);

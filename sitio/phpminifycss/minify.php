@@ -14,25 +14,6 @@
 
 /* Add your CSS files to this array (THESE ARE ONLY EXAMPLES) */
 $cssFiles = array(
-    'css/styles/action-bar.css',
-    'css/styles/contact.css',
-    'css/styles/footer.css',
-    'css/styles/form-elements.css',
-    'css/styles/fullwidth-features.css',
-    'css/styles/global-helper-sectio.css',
-    'css/styles/headers-slider-dividers.css',
-    'css/styles/hero-carousel.css',
-    'css/styles/infobox.css',
-    'css/styles/integrity-light.css',
-    'css/styles/main-navigation.css',
-    'css/styles/main-sitio.css',
-    'css/styles/media-box.css',
-    'css/styles/media-print.css',
-    'css/styles/results-items.css',
-    'css/styles/section-colors.css',
-    'css/styles/single-listing-action.css',
-    'css/styles/typography.css',
-    'css/styles/video-strip.css'
 );
 
 /**
